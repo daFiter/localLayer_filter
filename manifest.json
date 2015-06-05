@@ -1,0 +1,19 @@
+{
+  "name": "LocalLayer_filter",
+  "label": "Local Layer Widget Filter2",
+  "platform": "HTML",
+  "version": "0.1",
+  "wabVersion": "1.1",
+  "author": "Rickey Fite & Adam Drackley (adam.drackley@gmail.com) & Robert Scheitlin",
+  "description": "This widget is for adding local layer to Web AppBuilder and Filtering it",
+  "copyright": "",
+  "license": "MIT License",
+  "properties": {
+
+      		"inPanel":true,
+		"hasLocale": true,
+		"hasStyle":true,
+		"hasConfig":true,
+		"hasUIFile":true
+  }
+}

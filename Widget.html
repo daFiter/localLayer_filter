@@ -1,0 +1,77 @@
+<div>
+  <table style="width:100%" cellspacing="8">
+
+    <tr>
+      <td>
+        <label>Date:</label>
+      </td>
+      <td>
+        <select id="date" data-dojo-attach-point="s12" data-dojo-type="dijit/form/Select">
+          <option value="107">Date Range</option>
+          <option value="Clear2" selected="selected">All</option>
+        </select>
+      </td>
+    </tr>
+     
+     
+    <tr class="107" style="display:none">
+      <td>
+        <label for="from">From:</label>
+      </td>
+      <td>
+        <input type="text" id="from" name="from">
+      </td>
+    </tr>
+    <tr class="107" style="display:none">
+      <td>
+        <label for="to">To:</label>
+      </td>
+      <td>
+        <input type="text" id="to" name="to">
+      </td>
+    </tr>  </tr>
+    
+    
+    <tr>
+      <td>
+        <label>Crime:</label>
+      </td>
+      <td>
+        <select data-dojo-attach-point="s122" data-dojo-type="dijit/form/Select">
+          <option value="0" selected="selected">Larceny/Theft</option>
+          <option value="1">Vehicle Theft</option>
+          <option value="2">Assult</option>
+          <option value="6">Other</option>
+          <option value="7">DUII</option>
+          <option value="8">Fraud</option>
+          <option value="9">Burglary</option>
+          <option value="10">Traffic Stop</option>
+          <option value="" disabled="true">----------</option>
+          <option value="Clear">All</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Time:</label>
+      </td>
+      <td>
+        <select data-dojo-attach-point="s1" data-dojo-type="dijit/form/Select">
+          <option value="010">Day (6am-8pm)</option>
+          <option value="011">Commute(7-9am/5-7pm)</option>
+          <option value="012">Night (8pm-6am)</option>
+          <option value="013">Night Life (9pm-2am)</option>
+          <option value="" disabled="true">----------</option>
+          <option value="Clear3" selected="selected">All</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div>Visible Crimes: <b><span id="featcount"> Loading...</span>     </b> <br>
+  </div>
+  <p> For best results, most of the data is found between July and August 2014. Most of the crimes are Larceny/Theft</p>
+</div>

@@ -1,0 +1,95 @@
+{ 
+ "crimes": "Month='January'",
+    "layers": {
+        "layer": [
+            {
+                "type": "Feature",
+                "url": "http://gis.ashland.or.us/arcgis/rest/services/sandbox/crimeloc/MapServer/2",
+                "name": "crimeloc_filter",
+                "opacity": 0.59,
+                "visible": true,
+                "showLabels": true,
+                "popup": {
+                    "title": "Crime",
+                    "fieldInfos": [
+                        {
+                            "fieldName": "crime",
+                            "label": "crime",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "date",
+                            "label": "date",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "time",
+                            "label": "time",
+                            "visible": false
+            },
+                        {
+                            "fieldName": "Address",
+                            "label": "Address",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "Description",
+                            "label": "Description",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "IncidntNum",
+                            "label": "IncidntNum",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "Descript",
+                            "label": "Descript",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "DayOfWeek",
+                            "label": "DayOfWeek",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "Date_1",
+                            "label": "Date_1",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "Time_1",
+                            "label": "Time",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "PdDistrict",
+                            "label": "PdDistrict",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "Resolution",
+                            "label": "Resolution",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "Location",
+                            "label": "Location",
+                            "visible": true
+            },
+                        {
+                            "fieldName": "Month",
+                            "label": "Month",
+                            "visible": true
+            }
+          ],
+                    "showAttachments": true,
+                    "tr": null
+                },
+                "autorefresh": 0,
+                "mode": "ondemand"
+      }
+    ]
+    }
+
+}

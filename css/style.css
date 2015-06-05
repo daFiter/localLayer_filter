@@ -1,0 +1,13 @@
+.definition_query h3{
+    color: orange;
+}
+
+      #buttons {
+        background: #fff;
+        box-shadow: 0 0 5px #888;
+        left: 1em;
+        padding: 0.5em;
+      
+        top: 1em;
+        z-index: 40;
+      }
