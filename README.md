@@ -1,30 +1,32 @@
-LocalLayerWidget 1.5.1
+LocalLayer_filter Widget 0.1
 ==
 
-The LocalLayer Widget for ArcGIS Web AppBuilder is intended to allow the direct addition of ArcGIS for Server Mapservices to an ArcGIS Web AppBuilder application, without needing to wrap the desired services in an ArcGIS Online/Portal Web Map.  The Legend, LayerList, and AttributeTable widgets should continue to work with your local layers.
+The LocalLayer Widget for ArcGIS Web AppBuilder is intended to allow the direct addition of ArcGIS for Server Mapservices to an ArcGIS Web AppBuilder application and filter the attributes, without needing to wrap the desired services in an ArcGIS Online/Portal Web Map.  The Legend, LayerList, and AttributeTable widgets should continue to work with your local layers.
 
 :bulb: In addition to the setup steps below, Rebecca Strauch generously provides and updates a living document of Tips and Tricks for implementing and using this widget.  Please find it on her GeoNet blog located [here](https://geonet.esri.com/blogs/myAlaskaGIS/2015/02/04/tips-for-using-the-custom-locallayer-widget-with-wab-dev-edition).
 
 ###Setting up the Widget
 
-Please note that this is not an in-panel widget.  To add it to your ArcGIS Web AppBuilder, add the widget to your \client\stemapp\widgets directory, and add a reference to the widget in the standard default2Dapp configuration located at \client\builder\predefined-apps\default2DApp\config.json for v1.0 and \client\stemapp\predefined-apps\default\config.json for v1.1, under the widgetOnScreen section.
+
+
+Please note that this is in-panel widget.  To add it to your ArcGIS Web AppBuilder, add the widget to your \client\stemapp\widgets directory, and add a reference to the widget in the standard default2Dapp configuration located at \client\builder\predefined-apps\default2DApp\config.json for v1.0 and \client\stemapp\predefined-apps\default\config.json for v1.1, under the widgetOnScreen section.
 
 ```javascript
 Example:
 	"widgetOnScreen": {
 		"widgets": [
 			{
-				"uri": "widgets/LocalLayer/Widget",
-				"visible": false
+				"uri": "widgets/LocalLayer_filter/Widget",
+				"visible": true
       		},
       	...
       	]
 	}
 ```
 
-:bulb: "visible":false will render the widget 'off' by default when building your applications, unless you wish to override the default WAB functionality and import your own layers directly from an ArcGIS Server instance.
 
-:bulb: Also, please note that the "/LocalLayer/" portion of the uri path above must match the folder name in which the widget resides on your local deployment.
+
+:bulb: Also, please note that the "/LocalLayer_filter/" portion of the uri path above must match the folder name in which the widget resides on your local deployment.
 
 :exclamation: IMPORTANT: Two minor changes will need to be made to your \client\stemapp\jimu.js\LayerInfos\LayerInfoForMapService.js file to make this tool operational.  
 For version 1.0 Line 433 should be changed from:
