@@ -62,7 +62,7 @@ var defExp = '',
       toDate = null,
       crimeDate = null,
       filterLayer = null;
-      ```
+```
       
 Change the definition to one that works with your layer and  make sure that you have enough defExp to match the number of filters you want.   
 
@@ -79,8 +79,8 @@ Change the definition to one that works with your layer and  make sure that you 
   Change the filter options that you want displayed. Keep track of the numbers that the filter corresponds with.
   
   
-   ``` 
-  applyFilter: function(selValue) {
+``` 
+ applyFilter: function(selValue) {
         switch (selValue) {
         case '0':
           defExp = 'crime =\'Larceny/Theft\'';
@@ -91,14 +91,14 @@ Change the definition to one that works with your layer and  make sure that you 
         case 'Clear':
           defExp = '';
           break;
-  ```
+```
   
   3. Change the \widgets\LocalLayer_filter\widget.html.
   
   The value needs to match the value in widget.js. It does not matter what your label is. 
 
 
-   ``` 
+``` 
     <select data-dojo-attach-point="s122" data-dojo-type="dijit/form/Select">
           <option value="0" selected="selected">Larceny/Theft</option>
           <option value="1">Vehicle Theft</option>
@@ -110,8 +110,8 @@ Change the definition to one that works with your layer and  make sure that you 
           <option value="10">Traffic Stop</option>
           <option value="" disabled="true">----------</option>
           <option value="Clear">All</option>
-        </select>
-      ```  
+     </select>     
+```  
         
   
   
