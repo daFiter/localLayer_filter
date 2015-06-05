@@ -18,76 +18,58 @@ The LocalLayer Widget for ArcGIS Web AppBuilder is intended to allow the direct 
 
 
 
-Please note that this is in-panel widget.  To add it to your ArcGIS Web AppBuilder, add the widget to your \client\stemapp\widgets directory, and add a reference to the widget in the standard default2Dapp configuration located at \client\builder\predefined-apps\default2DApp\config.json for v1.0 and \client\stemapp\predefined-apps\default\config.json for v1.1, under the widgetOnScreen section.
-
-```javascript
+Please note that this is in-panel widget. 
+To add a layer change the configs\LocalLayer_filter\config_local Layer Widget Filter.json file.
+```json
 Example:
-	"widgetOnScreen": {
-		"widgets": [
-			{
-				"uri": "widgets/LocalLayer_filter/Widget",
-				"visible": true
-      		},
-      	...
-      	]
-	}
-```
-
-
-
-:bulb: Also, please note that the "/LocalLayer_filter/" portion of the uri path above must match the folder name in which the widget resides on your local deployment.
-
-:exclamation: IMPORTANT: Two minor changes will need to be made to your \client\stemapp\jimu.js\LayerInfos\LayerInfoForMapService.js file to make this tool operational.  
-For version 1.0 Line 433 should be changed from:
-For version 1.1 Line 450 should be changed from:
-```
-var url = this.originOperLayer.url + '/' + subId;
-```
-
-To:
-```
-var url = this.originOperLayer.layerObject.url + '/' + subId;
-```
-
-for v1.0 And line 406 should be changed from:
-for v1.1 And line 423 should be changed from:
-
-```
-var url = this.originOperLayer.url + '/layers';
-```
-
-To:
-```
-var url = this.originOperLayer.layerObject.url + '/layers';
-```
-
-:bulb: The default theme in WAB is the foldable theme so adding the Local Layer widget to the Tab theme involves another step.
-
-```
-Example:
-    "widgetOnScreen": {
-        "widgets": [
+	"layers": {
+    "layer": [
+      {
+        "type": "Feature",
+        "url": "http://gis.ashland.or.us/arcgis/rest/services/sandbox/crimeloc/MapServer/2",
+        "name": "crimeloc_filter",
+        "opacity": 0.59,
+        "visible": true,
+        "showLabels": true,
+        "popup": {
+          "title": "Crime",
+          "fieldInfos": [
             {
-                "uri": "widgets/LocalLayer/Widget",
-                "visible": false
-            },
-        ...
-        ]
-    }
+              "fieldName": "crime",
+              "label": "crime",
+              "visible": true
+            }     
+            ],
+          "showAttachments": true,
+          "tr": null
+        },
+        "autorefresh": 0,
+        "mode": "ondemand"
+      }
+    ]
+  }
 ```
-1. open the client\stemapp\themes\TabTheme\layouts\default\config.json in a text editor and add the code block above. This will take care of adding the Local Layer widget to default
+To add a filter change the \widgets\LocalLayer_filter\widget.js file starting at line 48.
 
-:bulb: If you would like labels to display on your Feature Services by default, make sure to add "showLabels":true under the mapOptions setting of your config.json file located under \client\stemapp\ (or at the root of your current app), in addition to checking the "Show Labels?" checkbox under the Feature Layer Settings Menu.  Please note that there is currently an ESRI API bug preventing complex labelling expressions from being displayed on Feature Layers, such as expressions containing the CONCAT operator, and hopefully this will be addressed by esri in future releases.
+:exclamation: IMPORTANT: There are 3 major places in widget.js that need to be update for this to work. 
 
+Make sure that you have enough defExp to match the number of filters you want. 
 ```
-Example:
-    "map": {
-        ...
-        "mapOptions": {
-            "showLabels":true,
-            "extent": {
-              ...
-            }
-        }
-    }
-```
+var defExp = '',
+      defExp2 = null,
+      defExp3 = null,
+      fromDate = null,
+      toDate = null,
+      crimeDate = null,
+      filterLayer = null;
+      ```
+      
+Change the definition to one that works with your layer and  make sure that you have enough defExp to match the number of filters you want.    
+  ```
+  constructor: function () {
+        this._originalWebMap = null;
+        defExp = 'crime =\'Larceny/Theft\'';//change this
+        defExp2 = '';
+        defExp3 = '';
+      },    
+      ```
