@@ -3,9 +3,12 @@ LocalLayer_filter Widget 0.1
 
 <a href="http://gis.ashland.or.us/demo3/" target="_blank">Demo</a>
 
+<img src="http://gis.ashland.or.us/demo3/images/widget.PNG" alt="Widget">
+
 The LocalLayer Widget for ArcGIS Web AppBuilder is intended to allow the direct addition of ArcGIS for Server Mapservices to an ArcGIS Web AppBuilder application and filter the attributes, without needing to wrap the desired services in an ArcGIS Online/Portal Web Map.  The Legend, LayerList, and AttributeTable widgets should continue to work with your local layers.
 
 :bulb: In addition to the setup steps below, Rebecca Strauch generously provides and updates a living document of Tips and Tricks for implementing and using this widget.  Please find it on her GeoNet blog located [here](https://geonet.esri.com/blogs/myAlaskaGIS/2015/02/04/tips-for-using-the-custom-locallayer-widget-with-wab-dev-edition).
+
 
 ###Setting up the Widget
 
