@@ -53,6 +53,7 @@ Example:
 :exclamation: IMPORTANT: There are 3 major places in widget.js that need to be update for this to work. 
 
 Make sure that you have enough defExp to match the number of filters you want. 
+
 ```
 var defExp = '',
       defExp2 = null,
@@ -63,7 +64,9 @@ var defExp = '',
       filterLayer = null;
       ```
       
-Change the definition to one that works with your layer and  make sure that you have enough defExp to match the number of filters you want.    
+Change the definition to one that works with your layer and  make sure that you have enough defExp to match the number of filters you want.   
+
+
   ```
   constructor: function () {
         this._originalWebMap = null;
@@ -74,6 +77,8 @@ Change the definition to one that works with your layer and  make sure that you 
   ```
   
   Change the filter options that you want displayed. Keep track of the numbers that the filter corresponds with.
+  
+  
    ``` 
   applyFilter: function(selValue) {
         switch (selValue) {
