@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2014 Adam Drackley
+Copyright (c) 2014 Rickey Fite
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
