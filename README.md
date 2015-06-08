@@ -25,7 +25,7 @@ Example:
     "layer": [
       {
         "type": "Feature",
-        "url": "http://gis.ashland.or.us/arcgis/rest/services/sandbox/crimeloc/MapServer/2",
+        "url": "http://yoururl/arcgis/rest/services/sandbox/crimeloc/MapServer/2",
         "name": "crimeloc_filter",
         "opacity": 0.59,
         "visible": true,
