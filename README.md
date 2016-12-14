@@ -1,4 +1,4 @@
-LocalLayer_filter Widget 0.1 With a little change this will work with WAB 2.2
+LocalLayer_filter Widget 0.1          With a little change this will work with WAB 2.2
 ==
 
 <a href="http://gis.ashland.or.us/demo3/" target="_blank">Demo</a>
