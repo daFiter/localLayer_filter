@@ -10,6 +10,8 @@ Rickey Fite, Stan McShinsky, and Robert Scheitlin have been the major contribito
 
 :exclamation: IMPORTANT: To get this to work with WAB2.2 you need to delete all of the date picker code. All I did was delete line 148-255 in widget.js
 
+:exclamation: IMPORTANT: I just tested my 2.2 version and it works in 2.5 (my configureation of the widget not the one avaliable for download) 
+
 The LocalLayer Widget for ArcGIS Web AppBuilder is intended to allow the direct addition of ArcGIS for Server Mapservices to an ArcGIS Web AppBuilder application and filter the attributes, without needing to wrap the desired services in an ArcGIS Online/Portal Web Map.  The Legend, LayerList, and AttributeTable widgets should continue to work with your local layers.
 
 :bulb: In addition to the setup steps below, Rebecca Strauch generously provides and updates a living document of Tips and Tricks for implementing and using this widget.  Please find it on her GeoNet blog located [here](https://geonet.esri.com/blogs/myAlaskaGIS/2015/02/04/tips-for-using-the-custom-locallayer-widget-with-wab-dev-edition).
