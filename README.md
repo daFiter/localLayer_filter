@@ -1,4 +1,5 @@
 LocalLayer_filter Widget 0.1          With a little change this will work with WAB 2.7 
+==
 I just added it to 2.7 and it still works. I will test with 2.8 Soon. 
 ==
 
@@ -9,7 +10,7 @@ I just added it to 2.7 and it still works. I will test with 2.8 Soon.
 :exclamation: IMPORTANT: Most of this widget was taken from Adam Drackley's LocalLayer Widget. 
 Rickey Fite, Stan McShinsky, and Robert Scheitlin have been the major contribitors. 
 
-:exclamation: IMPORTANT: To get this to work with WAB2.2 you need to delete all of the date picker code. All I did was delete line 148-255 in widget.js
+:exclamation: IMPORTANT: To get this to work with WAB2.7 you need to delete all of the date picker code. All I did was delete line 148-255 in widget.js
 
 :exclamation: IMPORTANT: I just tested my 2.2 version and it works in 2.5 (my configureation of the widget not the one avaliable for download) 
 
