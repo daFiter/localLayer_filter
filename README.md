@@ -8,7 +8,7 @@ I just added it to 2.7 and it still works. I will test with 2.8 Soon.
 <img src="http://gis.ashland.or.us/demo3/images/widget.PNG" alt="Widget">
 
 :exclamation: IMPORTANT: Most of this widget was taken from Adam Drackley's LocalLayer Widget. 
-Rickey Fite, Stan McShinsky, and Robert Scheitlin have been the major contribitors. 
+ Stan McShinsky, and Robert Scheitlin have been the major contribitors. 
 
 :exclamation: IMPORTANT: To get this to work with WAB2.7 you need to delete all of the date picker code. All I did was delete line 148-255 in widget.js
 
